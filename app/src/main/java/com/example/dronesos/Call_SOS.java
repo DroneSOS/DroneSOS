@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //package com.example.dronesos;
 //
 //import androidx.appcompat.app.AppCompatActivity;
@@ -49,3 +50,41 @@
 //        }
 //    }
 //}
+=======
+package com.example.dronesos;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class Call_SOS extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_call_sos);
+    }
+        public void Call (View v){
+            EditText e = (EditText) findViewById(R.id.editText);
+            Toast.makeText(this, "121", Toast.LENGTH_LONG)
+                    .show();
+            Uri u = Uri.parse("tel:" + 121);
+            Intent i = new Intent(Intent.ACTION_DIAL, u);
+            try {
+                startActivity(i);
+            } catch (SecurityException s) {
+                Toast.makeText(this, "An error occurred", Toast.LENGTH_LONG)
+                        .show();
+            }
+        }
+
+}
+>>>>>>> 6ccce9a (first)

@@ -8,6 +8,7 @@
 
     <EditText
         android:id="@+id/editText"
+<<<<<<< HEAD
 
         android:layout_width="wrap_content"
 
@@ -29,6 +30,15 @@
 
         android:inputType="phone"
 
+=======
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginRight="8dp"
+        android:hint="Phone No."
+        android:inputType="phone"
+>>>>>>> 6ccce9a (first)
         android:minHeight="48dp"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -37,6 +47,7 @@
 
     <Button
         android:id="@+id/button"
+<<<<<<< HEAD
 
 
     android:layout_width="wrap_content"
@@ -54,6 +65,15 @@
     android:text="DIAL"
 
 
+=======
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="67dp"
+    android:onClick="Call"
+    android:text="DIAL"
+>>>>>>> 6ccce9a (first)
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/editText"

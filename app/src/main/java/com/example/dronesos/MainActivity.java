@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.telecom.Call;
 import android.view.View;
@@ -19,6 +20,7 @@ Button btnL_login,btnL_Emrg;
 TextView txtSU;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +33,8 @@ TextView txtSU;
         btnL_Emrg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent i=new Intent(MainActivity.this, Call_SOS.class);
-//                startActivity(i);
+                Intent i=new Intent(MainActivity.this, Call_SOS.class);
+                startActivity(i);
             }
         });
 
@@ -41,9 +43,11 @@ TextView txtSU;
             @Override
             public void onClick(View view) {
 
-                if((emailET_login.getText().toString().isEmpty() && passET_login.getText().toString().isEmpty())){
-                    Toast.makeText(getApplicationContext(), "Please Enter All Field", Toast.LENGTH_SHORT).show();
-                    return;
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
+                    if((emailET_login.getText().toString().isEmpty() && passET_login.getText().toString().isEmpty())){
+                        Toast.makeText(getApplicationContext(), "Please Enter All Field", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
                 }
                 if(emailET_login.getText().toString().isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Please Enter Your Email", Toast.LENGTH_SHORT).show();
