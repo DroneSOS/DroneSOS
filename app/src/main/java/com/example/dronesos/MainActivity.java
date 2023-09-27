@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.telecom.Call;
 import android.view.View;
@@ -18,7 +17,6 @@ import org.w3c.dom.Text;
 public class MainActivity extends AppCompatActivity {
 Button btnL_login,btnL_Emrg;
 TextView txtSU;
-
 
 
     @Override
@@ -43,11 +41,9 @@ TextView txtSU;
             @Override
             public void onClick(View view) {
 
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
-                    if((emailET_login.getText().toString().isEmpty() && passET_login.getText().toString().isEmpty())){
-                        Toast.makeText(getApplicationContext(), "Please Enter All Field", Toast.LENGTH_SHORT).show();
-                        return;
-                    }
+                if((emailET_login.getText().toString().isEmpty() && passET_login.getText().toString().isEmpty())){
+                    Toast.makeText(getApplicationContext(), "Please Enter All Field", Toast.LENGTH_SHORT).show();
+                    return;
                 }
                 if(emailET_login.getText().toString().isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Please Enter Your Email", Toast.LENGTH_SHORT).show();
